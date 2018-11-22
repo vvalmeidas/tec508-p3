@@ -400,17 +400,27 @@ float cost_function(float *all_hypothesis, float *weights, int *labels, int num_
  * @return int 0, se a execução foi finalizada sem erros; -1, caso contrário
  */
 int main(int argc, char *argv[]) {
-    MPI_Init(&argc, &argv);
-
     /** obtém os argumentos, converte para int ou float e inicializa o número de 
      * épocas e a taxa de aprendizado **/
     int num_max_epochs = atoi(argv[1]);
     float learning_rate = atof(argv[2]);
     int num_total_images_training = atoi(argv[4]);
 
+    int my_rank; //id do processo
+    float time_begin, time_end; //tempo de processamento
+    float time_begin_total, time_end_total; //tempo total de execução
+
+
+    MPI_Init(&argc, &argv);
+
+    time_begin_total = MPI_Wtime();
 
     /* define o número de threads com base no valor informado */
     omp_set_num_threads(atoi(argv[3]));
+
+    MPI_Comm_rank(MPI_COMM_WORLD, &my_rank);
+
+    printf("%d\n", my_rank);
 
     /* vetor de pesos */
     float *weights = (float *) malloc(NUM_PIXELS * sizeof(float));
@@ -434,7 +444,7 @@ int main(int argc, char *argv[]) {
     FILE *file_log_output, *file_csv_output;
 
     /* ponteiro para o arquivo de dados de saída */
-    FILE *file_cost_output, *file_accuracy_output, *file_precision_output, *file_recall_output, *file_f1_output;
+    FILE *file_time_output, *file_total_time_output, *file_cost_output, *file_accuracy_output, *file_precision_output, *file_recall_output, *file_f1_output;
 
     /* linha do arquivo */
     char *line; 
@@ -461,6 +471,22 @@ int main(int argc, char *argv[]) {
     char file_name_graphics[80], *file_name_middle = "_pdataset_", *file_name_end = "_epochs_output.csv";
 
     /* cria os arquivos de saída de dados */
+    strcpy(file_name_graphics, "../graphics/total_time_");
+    strcat(file_name_graphics, argv[4]);
+    strcat(file_name_graphics, file_name_middle);
+    strcat(file_name_graphics, argv[1]);
+    strcat(file_name_graphics, file_name_end);
+
+    file_total_time_output = fopen(file_name_graphics, "w");
+
+    strcpy(file_name_graphics, "../graphics/time_");
+    strcat(file_name_graphics, argv[4]);
+    strcat(file_name_graphics, file_name_middle);
+    strcat(file_name_graphics, argv[1]);
+    strcat(file_name_graphics, file_name_end);
+
+    file_time_output = fopen(file_name_graphics, "w");
+
     strcpy(file_name_graphics, "../graphics/cost_");
     strcat(file_name_graphics, argv[4]);
     strcat(file_name_graphics, file_name_middle);
@@ -517,6 +543,8 @@ int main(int argc, char *argv[]) {
     fprintf(file_log_output, "NÚMERO DE AMOSTRAS: %d  /  NÚMERO DE ÉPOCAS: %d  /  TAXA DE APRENDIZADO: %f\n", num_total_images_training, num_max_epochs, learning_rate);
     fprintf(file_log_output, "NÚMERO DE THREADS: %d\n\n\n", atoi(argv[3]));
 
+    time_begin = MPI_Wtime();
+
     /* realiza iterações até o número máximo de épocas */
     while (num_epochs < num_max_epochs) {
 
@@ -565,8 +593,19 @@ int main(int argc, char *argv[]) {
 
     save_testing_results(results_testing, labels_testing, NUM_IMAGES_TESTING, testing_images_names, file_log_output, file_csv_output);
 
+    time_end = MPI_Wtime();
+
+
     fclose(file_log_output);
     fclose(file_csv_output);
 
+    time_end_total = MPI_Wtime(); //tempo final de execução
+
     MPI_Finalize();
+
+    fprintf(file_total_time_output, "%d,%f\n", my_rank, ((time_end_total-time_begin_total)*1000)); //grava o tempo em milissegundos
+    fprintf(file_time_output, "%d,%f\n", my_rank, ((time_end-time_begin)*1000)); //grava o tempo de processamento em milissegundos
+
+    fclose(file_total_time_output);
+    fclose(file_time_output);
 }
