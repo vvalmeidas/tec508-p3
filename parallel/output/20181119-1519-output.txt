@@ -1,0 +1,63 @@
+RESULTADO - TREINAMENTOS:
+NÚMERO DE AMOSTRAS: 4000  /  NÚMERO DE ÉPOCAS: 5  /  TAXA DE APRENDIZADO: 0.010000
+NÚMERO DE THREADS: 4
+
+
+-- ÉPOCA 1 --
+MATRIZ DE CONFUSÃO:
+2330    53
+1525    92
+
+Acertos: 2422       Erros: 1578
+Acurácia: 0.605500      Precisão: 0.634483        Revocação: 0.056895       F1: 0.104427
+Custo:    0.693057
+
+-- ÉPOCA 2 --
+MATRIZ DE CONFUSÃO:
+2383    0
+1616    1
+
+Acertos: 2384       Erros: 1616
+Acurácia: 0.596000      Precisão: 1.000000        Revocação: 0.000618       F1: 0.001236
+Custo:    0.694105
+
+-- ÉPOCA 3 --
+MATRIZ DE CONFUSÃO:
+218    2165
+20    1597
+
+Acertos: 1815       Erros: 2185
+Acurácia: 0.453750      Precisão: 0.424508        Revocação: 0.987631       F1: 0.593791
+Custo:    0.693056
+
+-- ÉPOCA 4 --
+MATRIZ DE CONFUSÃO:
+2381    2
+1605    12
+
+Acertos: 2393       Erros: 1607
+Acurácia: 0.598250      Precisão: 0.857143        Revocação: 0.007421       F1: 0.014715
+Custo:    0.707255
+
+-- ÉPOCA 5 --
+MATRIZ DE CONFUSÃO:
+189    2194
+16    1601
+
+Acertos: 1790       Erros: 2210
+Acurácia: 0.447500      Precisão: 0.421871        Revocação: 0.990105       F1: 0.591648
+Custo:    0.701406
+
+
+
+
+RESULTADO - TESTE:
+NÚMERO DE AMOSTRAS: 1210  /  TAXA DE APRENDIZADO: 0.010000
+
+
+MATRIZ DE CONFUSÃO:
+674    5
+525    6
+
+Acertos: 680       Erros: 530
+Acurácia: 0.561983      Precisão: 0.545455        Revocação: 0.011299       F1: 0.022140

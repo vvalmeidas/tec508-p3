@@ -1,0 +1,116 @@
+\hypertarget{csv_8c}{}\section{Referência do Arquivo csv.\+c}
+\label{csv_8c}\index{csv.\+c@{csv.\+c}}
+
+
+Biblioteca para leitura de arquivos .csv.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}csv.\+h\char`\"{}}\newline
+Gráfico de dependência de inclusões para csv.\+c\+:
+% FIG 0
+\subsection*{Enumerações}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries N\+O\+M\+EM} = -\/2
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{csv_8c_a3ccd31fc62a30997a68819e37d22f6c0}{csvgetline} (F\+I\+LE $\ast$fin, char delim, int compress)
+\begin{DoxyCompactList}\small\item\em Obtém uma linha do arquivo. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{csv_8c_a89fab1df96db11a18cd4bb5fed80526a}{csvfield} (int n)
+\begin{DoxyCompactList}\small\item\em Retorna ponteiro para o valor do n-\/ésimo campo da linha. \end{DoxyCompactList}\item 
+int \hyperlink{csv_8c_a5bb34de702a2829da82787d6a319c5b5}{csvnfield} (void)
+\begin{DoxyCompactList}\small\item\em Obtém o número de campos do arquivo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Biblioteca para leitura de arquivos .csv. 
+
+Esse arquivo contém os métodos utilizados para leitura de arquivos .csv. Os métodos são chamados pela função \hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main()} no arquivo principal. Retirado do livro \textquotesingle{}The Practice of Programming\textquotesingle{}.
+
+\begin{DoxyAuthor}{Autor}
+Brian W. Kernighan 
+
+Rob Pike 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+12/10/2018
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (C) 1999 Lucent Technologies 
+\end{DoxyCopyright}
+
+
+\subsection{Enumerações}
+\mbox{\Hypertarget{csv_8c_a06fc87d81c62e9abb8790b6e5713c55b}\label{csv_8c_a06fc87d81c62e9abb8790b6e5713c55b}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+Inclusão da biblioteca stdio Inclusão da biblioteca string Inclusão da biblioteca stdlib Inclusão da biblioteca assert 
+
+\subsection{Funções}
+\mbox{\Hypertarget{csv_8c_a89fab1df96db11a18cd4bb5fed80526a}\label{csv_8c_a89fab1df96db11a18cd4bb5fed80526a}} 
+\index{csv.\+c@{csv.\+c}!csvfield@{csvfield}}
+\index{csvfield@{csvfield}!csv.\+c@{csv.\+c}}
+\subsubsection{\texorpdfstring{csvfield()}{csvfield()}}
+{\footnotesize\ttfamily char$\ast$ csvfield (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Retorna ponteiro para o valor do n-\/ésimo campo da linha. 
+
+Retorna ponteiro para o valor do n-\/ésimo campo da linha.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n} & index do campo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+char$\ast$ string do campo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{csv_8c_a3ccd31fc62a30997a68819e37d22f6c0}\label{csv_8c_a3ccd31fc62a30997a68819e37d22f6c0}} 
+\index{csv.\+c@{csv.\+c}!csvgetline@{csvgetline}}
+\index{csvgetline@{csvgetline}!csv.\+c@{csv.\+c}}
+\subsubsection{\texorpdfstring{csvgetline()}{csvgetline()}}
+{\footnotesize\ttfamily char$\ast$ csvgetline (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fin,  }\item[{char}]{delim,  }\item[{int}]{compress }\end{DoxyParamCaption})}
+
+
+
+Obtém uma linha do arquivo. 
+
+Obtém uma linha do arquivo.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em fin} & ponteiro para o arquivo \\
+\hline
+{\em delim} & delimitador de linha \\
+\hline
+{\em compress} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+char$\ast$ string contendo a linha lida 
+\end{DoxyReturn}
+\mbox{\Hypertarget{csv_8c_a5bb34de702a2829da82787d6a319c5b5}\label{csv_8c_a5bb34de702a2829da82787d6a319c5b5}} 
+\index{csv.\+c@{csv.\+c}!csvnfield@{csvnfield}}
+\index{csvnfield@{csvnfield}!csv.\+c@{csv.\+c}}
+\subsubsection{\texorpdfstring{csvnfield()}{csvnfield()}}
+{\footnotesize\ttfamily int csvnfield (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o número de campos do arquivo. 
+
+Obtém o número de campos do arquivo.
+
+\begin{DoxyReturn}{Retorna}
+int número de campos do arquivo 
+\end{DoxyReturn}

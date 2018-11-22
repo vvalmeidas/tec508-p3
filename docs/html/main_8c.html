@@ -1,0 +1,705 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Classificador de Expressões Faciais: Referência do Arquivo main.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Classificador de Expressões Faciais
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência do Arquivo main.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Arquivo principal para execução da regressão logistica.  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;errno.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &quot;csv.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para main.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c__incl.png" border="0" usemap="#main_8c" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a4b7b60f85e14934124a7085bb7743d9d"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a4b7b60f85e14934124a7085bb7743d9d">estrdup</a> (char *s)</td></tr>
+<tr class="memdesc:a4b7b60f85e14934124a7085bb7743d9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Realiza alocação dinâmica para uma string.  <a href="#a4b7b60f85e14934124a7085bb7743d9d">Mais...</a><br /></td></tr>
+<tr class="separator:a4b7b60f85e14934124a7085bb7743d9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97c41a76be74c324032ca73c2da957ba"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a97c41a76be74c324032ca73c2da957ba">rand_range</a> (float min, float max)</td></tr>
+<tr class="memdesc:a97c41a76be74c324032ca73c2da957ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gera números reais aleatórios.  <a href="#a97c41a76be74c324032ca73c2da957ba">Mais...</a><br /></td></tr>
+<tr class="separator:a97c41a76be74c324032ca73c2da957ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f18e709f621307c11be4995c2932636"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a8f18e709f621307c11be4995c2932636">initialize_weights</a> (float *row)</td></tr>
+<tr class="memdesc:a8f18e709f621307c11be4995c2932636"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa o vetor de pesos.  <a href="#a8f18e709f621307c11be4995c2932636">Mais...</a><br /></td></tr>
+<tr class="separator:a8f18e709f621307c11be4995c2932636"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5eece21a6a89099a1f27f7c5c08fc83"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#af5eece21a6a89099a1f27f7c5c08fc83">read_data_and_labels</a> (char images_names[NUM_IMAGES_TESTING][60], FILE *file_log_output, float **data_testing, float **data_training, int *labels_testing, int *labels_training)</td></tr>
+<tr class="memdesc:af5eece21a6a89099a1f27f7c5c08fc83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Realiza a leitura completa do arquivo .csv de entrada.  <a href="#af5eece21a6a89099a1f27f7c5c08fc83">Mais...</a><br /></td></tr>
+<tr class="separator:af5eece21a6a89099a1f27f7c5c08fc83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1ed84c97d2ecbd52b67db49e1e8660e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ac1ed84c97d2ecbd52b67db49e1e8660e">save_training_results</a> (int epoch_num, int *results, int *labels, int num_images, FILE *file_log_output, FILE *file_accuracy_output, FILE *file_precision_output, FILE *file_f1_output, FILE *file_recall_output)</td></tr>
+<tr class="memdesc:ac1ed84c97d2ecbd52b67db49e1e8660e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Salva os resultados do treinamento em arquivo.  <a href="#ac1ed84c97d2ecbd52b67db49e1e8660e">Mais...</a><br /></td></tr>
+<tr class="separator:ac1ed84c97d2ecbd52b67db49e1e8660e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafbaa0b045965e6518d784a5ef4fd72c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aafbaa0b045965e6518d784a5ef4fd72c">save_testing_results</a> (int *results, int *labels, int num_images, char images_names[NUM_IMAGES_TESTING][60], FILE *file_log_output, FILE *file_csv_output)</td></tr>
+<tr class="memdesc:aafbaa0b045965e6518d784a5ef4fd72c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Salva os resultados do teste em arquivo.  <a href="#aafbaa0b045965e6518d784a5ef4fd72c">Mais...</a><br /></td></tr>
+<tr class="separator:aafbaa0b045965e6518d784a5ef4fd72c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a198466a099178b81b22c26fc57801f8c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a198466a099178b81b22c26fc57801f8c">hypothesis_function</a> (float *row, float *weights)</td></tr>
+<tr class="memdesc:a198466a099178b81b22c26fc57801f8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Realiza o cálculo da função hipótese.  <a href="#a198466a099178b81b22c26fc57801f8c">Mais...</a><br /></td></tr>
+<tr class="separator:a198466a099178b81b22c26fc57801f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac907cfb5d61f426bdf7655a44cfeba68"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ac907cfb5d61f426bdf7655a44cfeba68">gradient</a> (float **data_training, int *labels, float *all_hypothesis, int c, float learning_rate)</td></tr>
+<tr class="memdesc:ac907cfb5d61f426bdf7655a44cfeba68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Realiza o cálculo do gradiente descendente.  <a href="#ac907cfb5d61f426bdf7655a44cfeba68">Mais...</a><br /></td></tr>
+<tr class="separator:ac907cfb5d61f426bdf7655a44cfeba68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dbb2bac719cd9cad1bd3ba6a5a6a1fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a7dbb2bac719cd9cad1bd3ba6a5a6a1fd">update_weights</a> (float **data_training, float *weights, float *all_hypothesis, int *labels, float learning_rate)</td></tr>
+<tr class="memdesc:a7dbb2bac719cd9cad1bd3ba6a5a6a1fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Realiza a atualização dos pesos.  <a href="#a7dbb2bac719cd9cad1bd3ba6a5a6a1fd">Mais...</a><br /></td></tr>
+<tr class="separator:a7dbb2bac719cd9cad1bd3ba6a5a6a1fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4560cb2abb0eb7db41a09aa8f2dca77"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#af4560cb2abb0eb7db41a09aa8f2dca77">cost_function</a> (float *all_hypothesis, float *weights, int *labels, int num_images)</td></tr>
+<tr class="memdesc:af4560cb2abb0eb7db41a09aa8f2dca77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Realiza o cálculo da função de custo.  <a href="#af4560cb2abb0eb7db41a09aa8f2dca77">Mais...</a><br /></td></tr>
+<tr class="separator:af4560cb2abb0eb7db41a09aa8f2dca77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:a0ddf1224851353fc92bfbff6f499fa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função principal, na qual é iniciada a execução do algoritmo.  <a href="#a0ddf1224851353fc92bfbff6f499fa97">Mais...</a><br /></td></tr>
+<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
+<div class="textblock"><p>Arquivo principal para execução da regressão logistica. </p>
+<p>Esse arquivo contém os principais métodos para execução do algoritmo de regressão logistica. A execução é iniciada pela função <a class="el" href="main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="Função principal, na qual é iniciada a execução do algoritmo. ">main()</a>, que realiza a chamada a todas as funções auxiliares (internas ou externas ao arquivo) necessárias.</p>
+<dl class="section author"><dt>Autor</dt><dd>Nadine Cerqueira Marques (<a href="#" onclick="location.href='mai'+'lto:'+'nad'+'ym'+'ark'+'es'+'@gm'+'ai'+'l.c'+'om'; return false;">nadym<span style="display: none;">.nosp@m.</span>arke<span style="display: none;">.nosp@m.</span>s@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a>) </dd>
+<dd>
+Valmir Vinicius de Almeida Santos (<a href="#" onclick="location.href='mai'+'lto:'+'vva'+'lm'+'eid'+'a9'+'6@g'+'ma'+'il.'+'co'+'m'; return false;">vvalm<span style="display: none;">.nosp@m.</span>eida<span style="display: none;">.nosp@m.</span>96@gm<span style="display: none;">.nosp@m.</span>ail.<span style="display: none;">.nosp@m.</span>com</a>) </dd></dl>
+<dl class="section version"><dt>Versão</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>12/10/2018</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2018 </dd></dl>
+</div><h2 class="groupheader">Funções</h2>
+<a id="af4560cb2abb0eb7db41a09aa8f2dca77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4560cb2abb0eb7db41a09aa8f2dca77">&#9670;&nbsp;</a></span>cost_function()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float cost_function </td>
+          <td>(</td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>all_hypothesis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>weights</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>labels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num_images</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Realiza o cálculo da função de custo. </p>
+<p>Realiza o cálculo da função de custo.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">all_hypothesis</td><td>vetor com valores calculados para hipótese </td></tr>
+    <tr><td class="paramname">weights</td><td>vetor de pesos </td></tr>
+    <tr><td class="paramname">labels</td><td>vetor de labels </td></tr>
+    <tr><td class="paramname">num_images</td><td>número de imagens </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>float custo resultante </dd></dl>
+
+</div>
+</div>
+<a id="a4b7b60f85e14934124a7085bb7743d9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b7b60f85e14934124a7085bb7743d9d">&#9670;&nbsp;</a></span>estrdup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* estrdup </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Realiza alocação dinâmica para uma string. </p>
+<p>Realiza a alocação dinâmica para um espaço de memória de acordo com a string informada.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>string para a qual se deseja alocar um espaço de memória </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void* ponteiro para o endereço de memória alocado </dd></dl>
+
+</div>
+</div>
+<a id="ac907cfb5d61f426bdf7655a44cfeba68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac907cfb5d61f426bdf7655a44cfeba68">&#9670;&nbsp;</a></span>gradient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gradient </td>
+          <td>(</td>
+          <td class="paramtype">float **&#160;</td>
+          <td class="paramname"><em>data_training</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>labels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>all_hypothesis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>learning_rate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Realiza o cálculo do gradiente descendente. </p>
+<p>Realiza o cálculo do gradiente descendente de acordo com o dataset de treinamento informado, labels de treinamento e valores de hipótese.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data_training</td><td>dataset de treinamento </td></tr>
+    <tr><td class="paramname">labels</td><td>labels de treinamento </td></tr>
+    <tr><td class="paramname">all_hypothesis</td><td>valores calculados para hipótese </td></tr>
+    <tr><td class="paramname">c</td><td>valor atual da coluna </td></tr>
+    <tr><td class="paramname">learning_rate</td><td>taxa de aprendizado </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>float valor de gradiente resultante </dd></dl>
+
+</div>
+</div>
+<a id="a198466a099178b81b22c26fc57801f8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a198466a099178b81b22c26fc57801f8c">&#9670;&nbsp;</a></span>hypothesis_function()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float hypothesis_function </td>
+          <td>(</td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>weights</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Realiza o cálculo da função hipótese. </p>
+<p>Realiza o cálculo da função hipótese de acordo com uma linha da matriz e com o vetor de pesos informado.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">row</td><td>linha da matriz </td></tr>
+    <tr><td class="paramname">weights</td><td>vetor de pesos </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>float resultado da função hipotese </dd></dl>
+
+</div>
+</div>
+<a id="a8f18e709f621307c11be4995c2932636"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f18e709f621307c11be4995c2932636">&#9670;&nbsp;</a></span>initialize_weights()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void initialize_weights </td>
+          <td>(</td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>row</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicializa o vetor de pesos. </p>
+<p>Inicializa o vetor de pesos com valores aleatórios gerados.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">row</td><td>referência para o vetor de pesos </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função principal, na qual é iniciada a execução do algoritmo. </p>
+<p>Função principal, na qual é iniciada a execução do algoritmo de acordo com os argumntos informados no terminal para número de épocas e taxa de aprendizagem.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>quantidade de argumentos </td></tr>
+    <tr><td class="paramname">argv</td><td>vetor contendo os argumentos número de épocas e taxa de aprendizado </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>int 0, se a execução foi finalizada sem erros; -1, caso contrário </dd></dl>
+<p>obtém os argumentos, converte para int ou float e inicializa o número de épocas e a taxa de aprendizado </p>
+
+</div>
+</div>
+<a id="a97c41a76be74c324032ca73c2da957ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97c41a76be74c324032ca73c2da957ba">&#9670;&nbsp;</a></span>rand_range()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float rand_range </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>max</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gera números reais aleatórios. </p>
+<p>Gera números reais aleatórios de acordo com o intervalo entre mínimo e máximo informado.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">min</td><td>valor mínimo </td></tr>
+    <tr><td class="paramname">max</td><td>valor máximo </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>float valor aleatório gerado </dd></dl>
+
+</div>
+</div>
+<a id="af5eece21a6a89099a1f27f7c5c08fc83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5eece21a6a89099a1f27f7c5c08fc83">&#9670;&nbsp;</a></span>read_data_and_labels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int read_data_and_labels </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>images_names</em>[NUM_IMAGES_TESTING][60], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>file_log_output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float **&#160;</td>
+          <td class="paramname"><em>data_testing</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float **&#160;</td>
+          <td class="paramname"><em>data_training</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>labels_testing</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>labels_training</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Realiza a leitura completa do arquivo .csv de entrada. </p>
+<p>Realiza a leitura completa do arquivo .csv de entrada e armazena os pixels lidos nas matrizes para dados de teste e treinamento. Os labels lidos são armazenados nos vetores de treinamento e de teste.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">testing_images_names[NUM_IMAGES_TESTING][60]</td><td>array contendo os nomes das imagens de teste </td></tr>
+    <tr><td class="paramname">file_log_output</td><td>ponteiro para escrita no log de saída </td></tr>
+    <tr><td class="paramname">data_testing</td><td>referência para matriz com dados para teste </td></tr>
+    <tr><td class="paramname">data_training</td><td>referência para matriz com dados para treinamento </td></tr>
+    <tr><td class="paramname">labels_testing</td><td>referência para vetor com labels para teste </td></tr>
+    <tr><td class="paramname">labels_training</td><td>referência para vetor com labels para treinamento</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>int 1, se a leitura foi bem sucedida; 0, caso contrário </dd></dl>
+<p>aloca espaço para o bias e adiciona o bias ao dataset de treinamento</p>
+<p>realiza iteração para cada pixel que será lido </p>
+
+</div>
+</div>
+<a id="aafbaa0b045965e6518d784a5ef4fd72c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafbaa0b045965e6518d784a5ef4fd72c">&#9670;&nbsp;</a></span>save_testing_results()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void save_testing_results </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>results</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>labels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num_images</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>images_names</em>[NUM_IMAGES_TESTING][60], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>file_log_output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>file_csv_output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Salva os resultados do teste em arquivo. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">results</td><td>vetor contendo resultados da regressão logistica </td></tr>
+    <tr><td class="paramname">labels</td><td>labels lidas do arquivo (valores corretos) </td></tr>
+    <tr><td class="paramname">num_images</td><td>número de imagens que foram processadas </td></tr>
+    <tr><td class="paramname">testing_images_names[NUM_IMAGES_TESTING][60]</td><td>array contendo os nomes das imagens de teste </td></tr>
+    <tr><td class="paramname">file_log_output</td><td>ponteiro para escrita no log de saída </td></tr>
+    <tr><td class="paramname">file_csv_output</td><td>ponteiro para escrita no arquivo csv de saída </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>computa os verdadeiros positivos e negativos e os falsos positivos e negativos </p>
+
+</div>
+</div>
+<a id="ac1ed84c97d2ecbd52b67db49e1e8660e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1ed84c97d2ecbd52b67db49e1e8660e">&#9670;&nbsp;</a></span>save_training_results()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void save_training_results </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>epoch_num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>results</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>labels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num_images</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>file_log_output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>file_accuracy_output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>file_precision_output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>file_f1_output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>file_recall_output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Salva os resultados do treinamento em arquivo. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">epoch_num</td><td>número da epoca </td></tr>
+    <tr><td class="paramname">results</td><td>vetor contendo resultados da regressão logistica </td></tr>
+    <tr><td class="paramname">labels</td><td>labels lidas do arquivo (valores corretos) </td></tr>
+    <tr><td class="paramname">num_images</td><td>número de imagens que foram processadas </td></tr>
+    <tr><td class="paramname">file_log_output</td><td>ponteiro para o arquivo de log de saída </td></tr>
+    <tr><td class="paramname">file_accuracy_output</td><td>ponteiro para o arquivo com registros de acurácia </td></tr>
+    <tr><td class="paramname">file_precision_output</td><td>ponteiro para o arquivo com registros de precisão </td></tr>
+    <tr><td class="paramname">file_f1_output</td><td>ponteiro para o arquivo com registros de f1 </td></tr>
+    <tr><td class="paramname">file_recall_output</td><td>ponteiro para o arquivo com registros de recall </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>computa os verdadeiros positivos e negativos e os falsos positivos e negativos </p>
+
+</div>
+</div>
+<a id="a7dbb2bac719cd9cad1bd3ba6a5a6a1fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dbb2bac719cd9cad1bd3ba6a5a6a1fd">&#9670;&nbsp;</a></span>update_weights()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void update_weights </td>
+          <td>(</td>
+          <td class="paramtype">float **&#160;</td>
+          <td class="paramname"><em>data_training</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>weights</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>all_hypothesis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>labels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>learning_rate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Realiza a atualização dos pesos. </p>
+<p>Realiza a atualização do vetor de pesos após a execução de uma época de treinamento.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data_training</td><td>dataset de treinamento </td></tr>
+    <tr><td class="paramname">weights</td><td>vetor de pesos </td></tr>
+    <tr><td class="paramname">all_hypothesis</td><td>valores calculados para hipótese </td></tr>
+    <tr><td class="paramname">labels</td><td>labels de treinamento </td></tr>
+    <tr><td class="paramname">learning_rate</td><td>taxa de aprendizado </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Classificador de Expressões Faciais: Referência do Arquivo csv.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Classificador de Expressões Faciais
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">Enumerações</a> &#124;
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência do Arquivo csv.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Biblioteca para leitura de arquivos .csv.  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;assert.h&gt;</code><br />
+<code>#include &quot;csv.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para csv.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="csv_8c__incl.png" border="0" usemap="#csv_8c" alt=""/></div>
+<map name="csv_8c" id="csv_8c">
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerações</h2></td></tr>
+<tr class="memitem:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>NOMEM</b> = -2
+ }</td></tr>
+<tr class="separator:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a3ccd31fc62a30997a68819e37d22f6c0"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csv_8c.html#a3ccd31fc62a30997a68819e37d22f6c0">csvgetline</a> (FILE *fin, char delim, int compress)</td></tr>
+<tr class="memdesc:a3ccd31fc62a30997a68819e37d22f6c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém uma linha do arquivo.  <a href="#a3ccd31fc62a30997a68819e37d22f6c0">Mais...</a><br /></td></tr>
+<tr class="separator:a3ccd31fc62a30997a68819e37d22f6c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89fab1df96db11a18cd4bb5fed80526a"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csv_8c.html#a89fab1df96db11a18cd4bb5fed80526a">csvfield</a> (int n)</td></tr>
+<tr class="memdesc:a89fab1df96db11a18cd4bb5fed80526a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna ponteiro para o valor do n-ésimo campo da linha.  <a href="#a89fab1df96db11a18cd4bb5fed80526a">Mais...</a><br /></td></tr>
+<tr class="separator:a89fab1df96db11a18cd4bb5fed80526a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bb34de702a2829da82787d6a319c5b5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csv_8c.html#a5bb34de702a2829da82787d6a319c5b5">csvnfield</a> (void)</td></tr>
+<tr class="memdesc:a5bb34de702a2829da82787d6a319c5b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém o número de campos do arquivo.  <a href="#a5bb34de702a2829da82787d6a319c5b5">Mais...</a><br /></td></tr>
+<tr class="separator:a5bb34de702a2829da82787d6a319c5b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
+<div class="textblock"><p>Biblioteca para leitura de arquivos .csv. </p>
+<p>Esse arquivo contém os métodos utilizados para leitura de arquivos .csv. Os métodos são chamados pela função <a class="el" href="main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="Função principal, na qual é iniciada a execução do algoritmo. ">main()</a> no arquivo principal. Retirado do livro 'The Practice of Programming'.</p>
+<dl class="section author"><dt>Autor</dt><dd>Brian W. Kernighan </dd>
+<dd>
+Rob Pike </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>12/10/2018</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (C) 1999 Lucent Technologies </dd></dl>
+</div><h2 class="groupheader">Enumerações</h2>
+<a id="a06fc87d81c62e9abb8790b6e5713c55b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06fc87d81c62e9abb8790b6e5713c55b">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Inclusão da biblioteca stdio Inclusão da biblioteca string Inclusão da biblioteca stdlib Inclusão da biblioteca assert </p>
+
+</div>
+</div>
+<h2 class="groupheader">Funções</h2>
+<a id="a89fab1df96db11a18cd4bb5fed80526a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89fab1df96db11a18cd4bb5fed80526a">&#9670;&nbsp;</a></span>csvfield()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* csvfield </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna ponteiro para o valor do n-ésimo campo da linha. </p>
+<p>Retorna ponteiro para o valor do n-ésimo campo da linha.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>index do campo </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>char* string do campo </dd></dl>
+
+</div>
+</div>
+<a id="a3ccd31fc62a30997a68819e37d22f6c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ccd31fc62a30997a68819e37d22f6c0">&#9670;&nbsp;</a></span>csvgetline()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* csvgetline </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>delim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>compress</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtém uma linha do arquivo. </p>
+<p>Obtém uma linha do arquivo.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fin</td><td>ponteiro para o arquivo </td></tr>
+    <tr><td class="paramname">delim</td><td>delimitador de linha </td></tr>
+    <tr><td class="paramname">compress</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>char* string contendo a linha lida </dd></dl>
+
+</div>
+</div>
+<a id="a5bb34de702a2829da82787d6a319c5b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bb34de702a2829da82787d6a319c5b5">&#9670;&nbsp;</a></span>csvnfield()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int csvnfield </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtém o número de campos do arquivo. </p>
+<p>Obtém o número de campos do arquivo.</p>
+<dl class="section return"><dt>Retorna</dt><dd>int número de campos do arquivo </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

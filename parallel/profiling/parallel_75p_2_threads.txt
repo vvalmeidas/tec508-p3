@@ -1,0 +1,80 @@
+# started on Sun Oct 28 10:56:15 2018
+
+
+ Performance counter stats for './tec508-p2 1000 0.01 2':
+
+     720776,904297      task-clock (msec)         #    1,977 CPUs utilized          
+             1.442      context-switches          #    0,002 K/sec                  
+                21      cpu-migrations            #    0,000 K/sec                  
+           153.356      page-faults               #    0,213 K/sec                  
+ 1.743.596.038.084      cycles                    #    2,419 GHz                    
+ 2.858.473.305.748      instructions              #    1,64  insn per cycle         
+   132.249.259.467      branches                  #  183,482 M/sec                  
+       232.441.734      branch-misses             #    0,18% of all branches        
+
+     364,597900612 seconds time elapsed
+
+# started on Sun Oct 28 11:02:19 2018
+
+
+ Performance counter stats for './tec508-p2 1000 0.01 2':
+
+     745453,664597      task-clock (msec)         #    1,978 CPUs utilized          
+             1.734      context-switches          #    0,002 K/sec                  
+                23      cpu-migrations            #    0,000 K/sec                  
+           153.355      page-faults               #    0,206 K/sec                  
+ 1.758.227.357.262      cycles                    #    2,359 GHz                    
+ 2.860.839.136.127      instructions              #    1,63  insn per cycle         
+   132.916.076.858      branches                  #  178,302 M/sec                  
+       231.808.119      branch-misses             #    0,17% of all branches        
+
+     376,912390435 seconds time elapsed
+
+# started on Sun Oct 28 11:08:36 2018
+
+
+ Performance counter stats for './tec508-p2 1000 0.01 2':
+
+     735063,961379      task-clock (msec)         #    1,977 CPUs utilized          
+             1.861      context-switches          #    0,003 K/sec                  
+                31      cpu-migrations            #    0,000 K/sec                  
+           153.355      page-faults               #    0,209 K/sec                  
+ 1.730.200.156.954      cycles                    #    2,354 GHz                    
+ 2.856.025.717.943      instructions              #    1,65  insn per cycle         
+   131.555.083.261      branches                  #  178,971 M/sec                  
+       233.706.204      branch-misses             #    0,18% of all branches        
+
+     371,717326813 seconds time elapsed
+
+# started on Sun Oct 28 11:14:48 2018
+
+
+ Performance counter stats for './tec508-p2 1000 0.01 2':
+
+     740601,355550      task-clock (msec)         #    1,977 CPUs utilized          
+             2.039      context-switches          #    0,003 K/sec                  
+                38      cpu-migrations            #    0,000 K/sec                  
+           153.354      page-faults               #    0,207 K/sec                  
+ 1.743.775.027.596      cycles                    #    2,355 GHz                    
+ 2.857.761.365.484      instructions              #    1,64  insn per cycle         
+   132.030.203.408      branches                  #  178,274 M/sec                  
+       232.134.400      branch-misses             #    0,18% of all branches        
+
+     374,564856425 seconds time elapsed
+
+# started on Sun Oct 28 11:21:03 2018
+
+
+ Performance counter stats for './tec508-p2 1000 0.01 2':
+
+     737940,064780      task-clock (msec)         #    1,977 CPUs utilized          
+             1.500      context-switches          #    0,002 K/sec                  
+                24      cpu-migrations            #    0,000 K/sec                  
+           153.352      page-faults               #    0,208 K/sec                  
+ 1.736.956.419.439      cycles                    #    2,354 GHz                    
+ 2.855.762.294.935      instructions              #    1,64  insn per cycle         
+   131.461.526.894      branches                  #  178,147 M/sec                  
+       234.480.072      branch-misses             #    0,18% of all branches        
+
+     373,237576728 seconds time elapsed
+

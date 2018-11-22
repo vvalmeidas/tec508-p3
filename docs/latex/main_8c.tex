@@ -1,0 +1,335 @@
+\hypertarget{main_8c}{}\section{Referência do Arquivo main.\+c}
+\label{main_8c}\index{main.\+c@{main.\+c}}
+
+
+Arquivo principal para execução da regressão logistica.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}csv.\+h\char`\"{}}\newline
+Gráfico de dependência de inclusões para main.\+c\+:
+% FIG 0
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{main_8c_a4b7b60f85e14934124a7085bb7743d9d}{estrdup} (char $\ast$s)
+\begin{DoxyCompactList}\small\item\em Realiza alocação dinâmica para uma string. \end{DoxyCompactList}\item 
+float \hyperlink{main_8c_a97c41a76be74c324032ca73c2da957ba}{rand\+\_\+range} (float min, float max)
+\begin{DoxyCompactList}\small\item\em Gera números reais aleatórios. \end{DoxyCompactList}\item 
+void \hyperlink{main_8c_a8f18e709f621307c11be4995c2932636}{initialize\+\_\+weights} (float $\ast$row)
+\begin{DoxyCompactList}\small\item\em Inicializa o vetor de pesos. \end{DoxyCompactList}\item 
+int \hyperlink{main_8c_af5eece21a6a89099a1f27f7c5c08fc83}{read\+\_\+data\+\_\+and\+\_\+labels} (char images\+\_\+names\mbox{[}N\+U\+M\+\_\+\+I\+M\+A\+G\+E\+S\+\_\+\+T\+E\+S\+T\+I\+NG\mbox{]}\mbox{[}60\mbox{]}, F\+I\+LE $\ast$file\+\_\+log\+\_\+output, float $\ast$$\ast$data\+\_\+testing, float $\ast$$\ast$data\+\_\+training, int $\ast$labels\+\_\+testing, int $\ast$labels\+\_\+training)
+\begin{DoxyCompactList}\small\item\em Realiza a leitura completa do arquivo .csv de entrada. \end{DoxyCompactList}\item 
+void \hyperlink{main_8c_ac1ed84c97d2ecbd52b67db49e1e8660e}{save\+\_\+training\+\_\+results} (int epoch\+\_\+num, int $\ast$results, int $\ast$labels, int num\+\_\+images, F\+I\+LE $\ast$file\+\_\+log\+\_\+output, F\+I\+LE $\ast$file\+\_\+accuracy\+\_\+output, F\+I\+LE $\ast$file\+\_\+precision\+\_\+output, F\+I\+LE $\ast$file\+\_\+f1\+\_\+output, F\+I\+LE $\ast$file\+\_\+recall\+\_\+output)
+\begin{DoxyCompactList}\small\item\em Salva os resultados do treinamento em arquivo. \end{DoxyCompactList}\item 
+void \hyperlink{main_8c_aafbaa0b045965e6518d784a5ef4fd72c}{save\+\_\+testing\+\_\+results} (int $\ast$results, int $\ast$labels, int num\+\_\+images, char images\+\_\+names\mbox{[}N\+U\+M\+\_\+\+I\+M\+A\+G\+E\+S\+\_\+\+T\+E\+S\+T\+I\+NG\mbox{]}\mbox{[}60\mbox{]}, F\+I\+LE $\ast$file\+\_\+log\+\_\+output, F\+I\+LE $\ast$file\+\_\+csv\+\_\+output)
+\begin{DoxyCompactList}\small\item\em Salva os resultados do teste em arquivo. \end{DoxyCompactList}\item 
+float \hyperlink{main_8c_a198466a099178b81b22c26fc57801f8c}{hypothesis\+\_\+function} (float $\ast$row, float $\ast$weights)
+\begin{DoxyCompactList}\small\item\em Realiza o cálculo da função hipótese. \end{DoxyCompactList}\item 
+float \hyperlink{main_8c_ac907cfb5d61f426bdf7655a44cfeba68}{gradient} (float $\ast$$\ast$data\+\_\+training, int $\ast$labels, float $\ast$all\+\_\+hypothesis, int c, float learning\+\_\+rate)
+\begin{DoxyCompactList}\small\item\em Realiza o cálculo do gradiente descendente. \end{DoxyCompactList}\item 
+void \hyperlink{main_8c_a7dbb2bac719cd9cad1bd3ba6a5a6a1fd}{update\+\_\+weights} (float $\ast$$\ast$data\+\_\+training, float $\ast$weights, float $\ast$all\+\_\+hypothesis, int $\ast$labels, float learning\+\_\+rate)
+\begin{DoxyCompactList}\small\item\em Realiza a atualização dos pesos. \end{DoxyCompactList}\item 
+float \hyperlink{main_8c_af4560cb2abb0eb7db41a09aa8f2dca77}{cost\+\_\+function} (float $\ast$all\+\_\+hypothesis, float $\ast$weights, int $\ast$labels, int num\+\_\+images)
+\begin{DoxyCompactList}\small\item\em Realiza o cálculo da função de custo. \end{DoxyCompactList}\item 
+int \hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Função principal, na qual é iniciada a execução do algoritmo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Arquivo principal para execução da regressão logistica. 
+
+Esse arquivo contém os principais métodos para execução do algoritmo de regressão logistica. A execução é iniciada pela função \hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main()}, que realiza a chamada a todas as funções auxiliares (internas ou externas ao arquivo) necessárias.
+
+\begin{DoxyAuthor}{Autor}
+Nadine Cerqueira Marques (\href{mailto:nadymarkes@gmail.com}{\tt nadymarkes@gmail.\+com}) 
+
+Valmir Vinicius de Almeida Santos (\href{mailto:vvalmeida96@gmail.com}{\tt vvalmeida96@gmail.\+com}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+12/10/2018
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018 
+\end{DoxyCopyright}
+
+
+\subsection{Funções}
+\mbox{\Hypertarget{main_8c_af4560cb2abb0eb7db41a09aa8f2dca77}\label{main_8c_af4560cb2abb0eb7db41a09aa8f2dca77}} 
+\index{main.\+c@{main.\+c}!cost\+\_\+function@{cost\+\_\+function}}
+\index{cost\+\_\+function@{cost\+\_\+function}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{cost\+\_\+function()}{cost\_function()}}
+{\footnotesize\ttfamily float cost\+\_\+function (\begin{DoxyParamCaption}\item[{float $\ast$}]{all\+\_\+hypothesis,  }\item[{float $\ast$}]{weights,  }\item[{int $\ast$}]{labels,  }\item[{int}]{num\+\_\+images }\end{DoxyParamCaption})}
+
+
+
+Realiza o cálculo da função de custo. 
+
+Realiza o cálculo da função de custo.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em all\+\_\+hypothesis} & vetor com valores calculados para hipótese \\
+\hline
+{\em weights} & vetor de pesos \\
+\hline
+{\em labels} & vetor de labels \\
+\hline
+{\em num\+\_\+images} & número de imagens \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+float custo resultante 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_a4b7b60f85e14934124a7085bb7743d9d}\label{main_8c_a4b7b60f85e14934124a7085bb7743d9d}} 
+\index{main.\+c@{main.\+c}!estrdup@{estrdup}}
+\index{estrdup@{estrdup}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{estrdup()}{estrdup()}}
+{\footnotesize\ttfamily char$\ast$ estrdup (\begin{DoxyParamCaption}\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Realiza alocação dinâmica para uma string. 
+
+Realiza a alocação dinâmica para um espaço de memória de acordo com a string informada.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em s} & string para a qual se deseja alocar um espaço de memória \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void$\ast$ ponteiro para o endereço de memória alocado 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_ac907cfb5d61f426bdf7655a44cfeba68}\label{main_8c_ac907cfb5d61f426bdf7655a44cfeba68}} 
+\index{main.\+c@{main.\+c}!gradient@{gradient}}
+\index{gradient@{gradient}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{gradient()}{gradient()}}
+{\footnotesize\ttfamily float gradient (\begin{DoxyParamCaption}\item[{float $\ast$$\ast$}]{data\+\_\+training,  }\item[{int $\ast$}]{labels,  }\item[{float $\ast$}]{all\+\_\+hypothesis,  }\item[{int}]{c,  }\item[{float}]{learning\+\_\+rate }\end{DoxyParamCaption})}
+
+
+
+Realiza o cálculo do gradiente descendente. 
+
+Realiza o cálculo do gradiente descendente de acordo com o dataset de treinamento informado, labels de treinamento e valores de hipótese.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em data\+\_\+training} & dataset de treinamento \\
+\hline
+{\em labels} & labels de treinamento \\
+\hline
+{\em all\+\_\+hypothesis} & valores calculados para hipótese \\
+\hline
+{\em c} & valor atual da coluna \\
+\hline
+{\em learning\+\_\+rate} & taxa de aprendizado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+float valor de gradiente resultante 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_a198466a099178b81b22c26fc57801f8c}\label{main_8c_a198466a099178b81b22c26fc57801f8c}} 
+\index{main.\+c@{main.\+c}!hypothesis\+\_\+function@{hypothesis\+\_\+function}}
+\index{hypothesis\+\_\+function@{hypothesis\+\_\+function}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{hypothesis\+\_\+function()}{hypothesis\_function()}}
+{\footnotesize\ttfamily float hypothesis\+\_\+function (\begin{DoxyParamCaption}\item[{float $\ast$}]{row,  }\item[{float $\ast$}]{weights }\end{DoxyParamCaption})}
+
+
+
+Realiza o cálculo da função hipótese. 
+
+Realiza o cálculo da função hipótese de acordo com uma linha da matriz e com o vetor de pesos informado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em row} & linha da matriz \\
+\hline
+{\em weights} & vetor de pesos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+float resultado da função hipotese 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_a8f18e709f621307c11be4995c2932636}\label{main_8c_a8f18e709f621307c11be4995c2932636}} 
+\index{main.\+c@{main.\+c}!initialize\+\_\+weights@{initialize\+\_\+weights}}
+\index{initialize\+\_\+weights@{initialize\+\_\+weights}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{initialize\+\_\+weights()}{initialize\_weights()}}
+{\footnotesize\ttfamily void initialize\+\_\+weights (\begin{DoxyParamCaption}\item[{float $\ast$}]{row }\end{DoxyParamCaption})}
+
+
+
+Inicializa o vetor de pesos. 
+
+Inicializa o vetor de pesos com valores aleatórios gerados.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em row} & referência para o vetor de pesos \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{main.\+c@{main.\+c}!main@{main}}
+\index{main@{main}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Função principal, na qual é iniciada a execução do algoritmo. 
+
+Função principal, na qual é iniciada a execução do algoritmo de acordo com os argumntos informados no terminal para número de épocas e taxa de aprendizagem.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em argc} & quantidade de argumentos \\
+\hline
+{\em argv} & vetor contendo os argumentos número de épocas e taxa de aprendizado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int 0, se a execução foi finalizada sem erros; -\/1, caso contrário 
+\end{DoxyReturn}
+obtém os argumentos, converte para int ou float e inicializa o número de épocas e a taxa de aprendizado \mbox{\Hypertarget{main_8c_a97c41a76be74c324032ca73c2da957ba}\label{main_8c_a97c41a76be74c324032ca73c2da957ba}} 
+\index{main.\+c@{main.\+c}!rand\+\_\+range@{rand\+\_\+range}}
+\index{rand\+\_\+range@{rand\+\_\+range}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{rand\+\_\+range()}{rand\_range()}}
+{\footnotesize\ttfamily float rand\+\_\+range (\begin{DoxyParamCaption}\item[{float}]{min,  }\item[{float}]{max }\end{DoxyParamCaption})}
+
+
+
+Gera números reais aleatórios. 
+
+Gera números reais aleatórios de acordo com o intervalo entre mínimo e máximo informado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em min} & valor mínimo \\
+\hline
+{\em max} & valor máximo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+float valor aleatório gerado 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_af5eece21a6a89099a1f27f7c5c08fc83}\label{main_8c_af5eece21a6a89099a1f27f7c5c08fc83}} 
+\index{main.\+c@{main.\+c}!read\+\_\+data\+\_\+and\+\_\+labels@{read\+\_\+data\+\_\+and\+\_\+labels}}
+\index{read\+\_\+data\+\_\+and\+\_\+labels@{read\+\_\+data\+\_\+and\+\_\+labels}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{read\+\_\+data\+\_\+and\+\_\+labels()}{read\_data\_and\_labels()}}
+{\footnotesize\ttfamily int read\+\_\+data\+\_\+and\+\_\+labels (\begin{DoxyParamCaption}\item[{char}]{images\+\_\+names\mbox{[}\+N\+U\+M\+\_\+\+I\+M\+A\+G\+E\+S\+\_\+\+T\+E\+S\+T\+I\+N\+G\mbox{]}\mbox{[}60\mbox{]},  }\item[{F\+I\+LE $\ast$}]{file\+\_\+log\+\_\+output,  }\item[{float $\ast$$\ast$}]{data\+\_\+testing,  }\item[{float $\ast$$\ast$}]{data\+\_\+training,  }\item[{int $\ast$}]{labels\+\_\+testing,  }\item[{int $\ast$}]{labels\+\_\+training }\end{DoxyParamCaption})}
+
+
+
+Realiza a leitura completa do arquivo .csv de entrada. 
+
+Realiza a leitura completa do arquivo .csv de entrada e armazena os pixels lidos nas matrizes para dados de teste e treinamento. Os labels lidos são armazenados nos vetores de treinamento e de teste.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em testing\+\_\+images\+\_\+names\mbox{[}\+N\+U\+M\+\_\+\+I\+M\+A\+G\+E\+S\+\_\+\+T\+E\+S\+T\+I\+N\+G\mbox{]}\mbox{[}60\mbox{]}} & array contendo os nomes das imagens de teste \\
+\hline
+{\em file\+\_\+log\+\_\+output} & ponteiro para escrita no log de saída \\
+\hline
+{\em data\+\_\+testing} & referência para matriz com dados para teste \\
+\hline
+{\em data\+\_\+training} & referência para matriz com dados para treinamento \\
+\hline
+{\em labels\+\_\+testing} & referência para vetor com labels para teste \\
+\hline
+{\em labels\+\_\+training} & referência para vetor com labels para treinamento\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int 1, se a leitura foi bem sucedida; 0, caso contrário 
+\end{DoxyReturn}
+aloca espaço para o bias e adiciona o bias ao dataset de treinamento
+
+realiza iteração para cada pixel que será lido \mbox{\Hypertarget{main_8c_aafbaa0b045965e6518d784a5ef4fd72c}\label{main_8c_aafbaa0b045965e6518d784a5ef4fd72c}} 
+\index{main.\+c@{main.\+c}!save\+\_\+testing\+\_\+results@{save\+\_\+testing\+\_\+results}}
+\index{save\+\_\+testing\+\_\+results@{save\+\_\+testing\+\_\+results}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{save\+\_\+testing\+\_\+results()}{save\_testing\_results()}}
+{\footnotesize\ttfamily void save\+\_\+testing\+\_\+results (\begin{DoxyParamCaption}\item[{int $\ast$}]{results,  }\item[{int $\ast$}]{labels,  }\item[{int}]{num\+\_\+images,  }\item[{char}]{images\+\_\+names\mbox{[}\+N\+U\+M\+\_\+\+I\+M\+A\+G\+E\+S\+\_\+\+T\+E\+S\+T\+I\+N\+G\mbox{]}\mbox{[}60\mbox{]},  }\item[{F\+I\+LE $\ast$}]{file\+\_\+log\+\_\+output,  }\item[{F\+I\+LE $\ast$}]{file\+\_\+csv\+\_\+output }\end{DoxyParamCaption})}
+
+
+
+Salva os resultados do teste em arquivo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em results} & vetor contendo resultados da regressão logistica \\
+\hline
+{\em labels} & labels lidas do arquivo (valores corretos) \\
+\hline
+{\em num\+\_\+images} & número de imagens que foram processadas \\
+\hline
+{\em testing\+\_\+images\+\_\+names\mbox{[}\+N\+U\+M\+\_\+\+I\+M\+A\+G\+E\+S\+\_\+\+T\+E\+S\+T\+I\+N\+G\mbox{]}\mbox{[}60\mbox{]}} & array contendo os nomes das imagens de teste \\
+\hline
+{\em file\+\_\+log\+\_\+output} & ponteiro para escrita no log de saída \\
+\hline
+{\em file\+\_\+csv\+\_\+output} & ponteiro para escrita no arquivo csv de saída \\
+\hline
+\end{DoxyParams}
+computa os verdadeiros positivos e negativos e os falsos positivos e negativos \mbox{\Hypertarget{main_8c_ac1ed84c97d2ecbd52b67db49e1e8660e}\label{main_8c_ac1ed84c97d2ecbd52b67db49e1e8660e}} 
+\index{main.\+c@{main.\+c}!save\+\_\+training\+\_\+results@{save\+\_\+training\+\_\+results}}
+\index{save\+\_\+training\+\_\+results@{save\+\_\+training\+\_\+results}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{save\+\_\+training\+\_\+results()}{save\_training\_results()}}
+{\footnotesize\ttfamily void save\+\_\+training\+\_\+results (\begin{DoxyParamCaption}\item[{int}]{epoch\+\_\+num,  }\item[{int $\ast$}]{results,  }\item[{int $\ast$}]{labels,  }\item[{int}]{num\+\_\+images,  }\item[{F\+I\+LE $\ast$}]{file\+\_\+log\+\_\+output,  }\item[{F\+I\+LE $\ast$}]{file\+\_\+accuracy\+\_\+output,  }\item[{F\+I\+LE $\ast$}]{file\+\_\+precision\+\_\+output,  }\item[{F\+I\+LE $\ast$}]{file\+\_\+f1\+\_\+output,  }\item[{F\+I\+LE $\ast$}]{file\+\_\+recall\+\_\+output }\end{DoxyParamCaption})}
+
+
+
+Salva os resultados do treinamento em arquivo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em epoch\+\_\+num} & número da epoca \\
+\hline
+{\em results} & vetor contendo resultados da regressão logistica \\
+\hline
+{\em labels} & labels lidas do arquivo (valores corretos) \\
+\hline
+{\em num\+\_\+images} & número de imagens que foram processadas \\
+\hline
+{\em file\+\_\+log\+\_\+output} & ponteiro para o arquivo de log de saída \\
+\hline
+{\em file\+\_\+accuracy\+\_\+output} & ponteiro para o arquivo com registros de acurácia \\
+\hline
+{\em file\+\_\+precision\+\_\+output} & ponteiro para o arquivo com registros de precisão \\
+\hline
+{\em file\+\_\+f1\+\_\+output} & ponteiro para o arquivo com registros de f1 \\
+\hline
+{\em file\+\_\+recall\+\_\+output} & ponteiro para o arquivo com registros de recall \\
+\hline
+\end{DoxyParams}
+computa os verdadeiros positivos e negativos e os falsos positivos e negativos \mbox{\Hypertarget{main_8c_a7dbb2bac719cd9cad1bd3ba6a5a6a1fd}\label{main_8c_a7dbb2bac719cd9cad1bd3ba6a5a6a1fd}} 
+\index{main.\+c@{main.\+c}!update\+\_\+weights@{update\+\_\+weights}}
+\index{update\+\_\+weights@{update\+\_\+weights}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{update\+\_\+weights()}{update\_weights()}}
+{\footnotesize\ttfamily void update\+\_\+weights (\begin{DoxyParamCaption}\item[{float $\ast$$\ast$}]{data\+\_\+training,  }\item[{float $\ast$}]{weights,  }\item[{float $\ast$}]{all\+\_\+hypothesis,  }\item[{int $\ast$}]{labels,  }\item[{float}]{learning\+\_\+rate }\end{DoxyParamCaption})}
+
+
+
+Realiza a atualização dos pesos. 
+
+Realiza a atualização do vetor de pesos após a execução de uma época de treinamento.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em data\+\_\+training} & dataset de treinamento \\
+\hline
+{\em weights} & vetor de pesos \\
+\hline
+{\em all\+\_\+hypothesis} & valores calculados para hipótese \\
+\hline
+{\em labels} & labels de treinamento \\
+\hline
+{\em learning\+\_\+rate} & taxa de aprendizado \\
+\hline
+\end{DoxyParams}
